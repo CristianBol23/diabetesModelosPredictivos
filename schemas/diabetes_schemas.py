@@ -9,10 +9,14 @@ class PatientDiabetesData(BaseModel):
         last_name: str
         pregnancies: int
         glucose: int
-        blood_pressure: int
-        skin_thickness: int
+        bloodPressure: int
+        skinThickness: int
         insulin: int
         bmi: float
-        diabetes_pedigree_function: float
+        diabetespedigreefunction: float
         age: int
         
+class PatientDiabetesOutput(BaseModel):
+        first_name: str
+        last_name: str
+        prediction: str

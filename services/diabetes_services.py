@@ -1,5 +1,5 @@
 import pickle
-from Diabetes.schemas.diabetes_schemas import PatientDiabetesData
+from schemas.diabetes_schemas import PatientDiabetesData
 import numpy as np
 
 with open('RFDiabetesv132.pkl', 'rb') as file:
@@ -12,13 +12,13 @@ def diabetes_prediction(data: PatientDiabetesData):
     xin = np.array([
         data.pregnancies,
         data.glucose,   
-        data.blood_pressure,
-        data.skin_thickness,
+        data.bloodPressure,
+        data.skinThickness,
         data.insulin,
         data.bmi,
-        data.diabetes_pedigree_function,
+        data.diabetespedigreefunction,
         data.age
-    ]), reshape(1,8)
+    ]).reshape(1,8)
 
 
     prediction = RF_model2.predict(xin)
